@@ -6,8 +6,6 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
-gem 'dotenv'
-
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
@@ -25,14 +23,11 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'factory_girl'
 
+
 end
 
 group :production do
   gem 'rails_12factor'
-end
-
-group :test do
-  gem 'coveralls', require: false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
