@@ -1,5 +1,12 @@
 # README
 
+[ ![Codeship Status for margocramer/commutes_group_project](https://app.codeship.com/projects/3a1d7920-4d42-0135-ea45-72e8c5ccfe37/status?branch=master)](https://app.codeship.com/projects/233137)
+
+![Code Climate](https://codeclimate.com/github/margocramer/commutes_group_project.png)
+
+![Coverage Status](https://coveralls.io/repos/margocramer/commutes_group_project/badge.png)
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
