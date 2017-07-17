@@ -4,7 +4,7 @@
 
 ![Code Climate](https://codeclimate.com/github/margocramer/commutes_group_project.png)
 
-![Coverage Status](https://coveralls.io/repos/margocramer/commutes_group_project/badge.png)
+[![Coverage Status](https://coveralls.io/repos/github/margocramer/commutes_group_project/badge.svg?branch=master)](https://coveralls.io/github/margocramer/commutes_group_project?branch=master)
 
 
 This README would normally document whatever steps are necessary to get the
