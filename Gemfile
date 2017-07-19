@@ -1,8 +1,6 @@
 source 'https://rubygems.org/'
 
-# newly added
-gem "devise"
-
+gem 'devise'
 
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
