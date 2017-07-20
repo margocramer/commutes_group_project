@@ -1,6 +1,7 @@
 source 'https://rubygems.org/'
 
 gem 'devise'
+gem 'faker', github: "stympy/faker"
 
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
