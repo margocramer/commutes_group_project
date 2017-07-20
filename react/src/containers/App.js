@@ -5,8 +5,14 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      commutes: []
     }
+  }
+
+  componentDidMount() {
+    fetch('/api/v1/commutes')
+    .then(response => response.json())
+    .then(json => this.setState({ commutes: json.commutes }))
   }
 
   render(){
