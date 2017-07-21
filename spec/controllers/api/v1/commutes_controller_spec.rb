@@ -7,7 +7,7 @@ RSpec.describe Api::V1::CommutesController, type: :controller do
   let!(:first_commute) { Commute.create(starting_location: "East Cambridge", ending_location: "Plymouth", mode: "Automobile", time: "Afternoon", user_id: 1) }
   let!(:second_commute) { Commute.create(starting_location: "Carver", ending_location: "Woburn", mode: "Walk", time: "Morning", user_id: 2) }
 
-  xdescribe "GET#index" do
+  describe "GET#index" do
     it "should return a list of all the commutes" do
 
       get :index
@@ -23,7 +23,7 @@ RSpec.describe Api::V1::CommutesController, type: :controller do
 
       expect(returned_json[1]["ending_location"]).to eq "Woburn"
       expect(returned_json[1]["time"]).to eq "Morning"
-      expect(returned_json[1]["rating"]).to eq 2
+      expect(returned_json[1]["mode"]).to eq "Walk"
     end
   end
 

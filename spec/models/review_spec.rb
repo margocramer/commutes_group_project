@@ -5,7 +5,7 @@ RSpec.describe Review, type: :model do
   it { should belong_to :commute }
 
   it { should have_valid(:review_stars).when(1, 2, 3, 4, 5) }
-  it { should_not have_valid(:review_stars).when("cabbage")}
+  it { should_not have_valid(:review_stars).when("cabbage", "", nil)}
 
    it "should match string's numbers" do
      review = Review.new

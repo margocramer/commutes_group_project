@@ -9,7 +9,7 @@ RSpec.describe Commute, type: :model do
       it { should_not have_valid(:ending_location).when(nil, "")}
 
       it { should have_valid(:time).when("Early Morning", "Morning", "Afternoon", "Early Evening", "Evening", "Night") }
-      it { should_not have_valid(:time).when(nil, "")}
+      it { should_not have_valid(:time).when(nil, "", "naptime")}
 
       it { should have_valid(:mode).when("Train", "Walk", "Automobile", "Bike") }
       it { should_not have_valid(:mode).when(nil, "", "Rocket-pack")}
