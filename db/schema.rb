@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720175143) do
+ActiveRecord::Schema.define(version: 20170721152802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20170720175143) do
     t.string "time", null: false
     t.string "mode", null: false
     t.string "description"
-    t.integer "rating", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -32,9 +31,9 @@ ActiveRecord::Schema.define(version: 20170720175143) do
     t.bigint "user_id", null: false
     t.bigint "commute_id", null: false
     t.string "comment", null: false
-    t.integer "tally_count", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "review_stars"
     t.index ["commute_id"], name: "index_reviews_on_commute_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
