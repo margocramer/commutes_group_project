@@ -4,29 +4,30 @@ describe('TextField', () => {
   let wrapper,
       label,
       name,
-      handlerFunctionSpy;
+      onChangeSpy;
 
   beforeEach(() => {
+    onChangeSpy = jasmine.createSpy('onChange Spy')
     wrapper = mount(
       <TextField
         label = 'my Label'
         name = 'my Name'
-        handlerFunction = {handlerFunctionSpy}
+        handlerFunction = {onChangeSpy}
       />
     )
   })
 
-  xit('should render a label tag', () => {
-    expect(wrapper.find('label')).stoBePresent();
+  it('should render a label tag', () => {
+    expect(wrapper.find('label')).toBePresent();
   });
 
   xit('should render ', ()=>{
-    expect(wrapper.find('label')).text.toBe("my Label")
+    expect(wrapper.find('label')).text.toBe("my Label");
   });
 
-  xit('should invoke the onClick function from props when clicked', ()=>{
-    wrapper.simulate('click');
-    expect(onClickSpy).toHaveBeenCalled();
+  xit('should invoke the onChangeSpy function from props when changed', ()=>{
+    wrapper.simulate('change');
+    expect(onChangeSpy).toHaveBeenCalled();
   });
 
 })

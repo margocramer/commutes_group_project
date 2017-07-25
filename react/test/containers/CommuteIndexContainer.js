@@ -1,11 +1,14 @@
-import CommuteIndexContainer from '../../src/components/CommuteIndexContainer';
-import CommuteIndexTile from '../../src/components/CommuteIndexTile'
+import CommuteIndexContainer from '../../src/containers/CommuteIndexContainer';
+import CommuteIndexTile from '../../src/components/CommuteIndexTile';
+import exampleCommute from '../constants/exampleCommute';
 
 
 describe('CommuteIndexContainer', ()=>{
-  let wrapper;
+  let wrapper,
+      commutes = exampleCommute.commutes;
 
   beforeEach(()=>{
+
     jasmineEnzyme();
     wrapper = mount(<CommuteIndexContainer />);
   });
@@ -14,9 +17,9 @@ describe('CommuteIndexContainer', ()=>{
     expect(wrapper.state()).to.not.equal({ commutes: [] });
   });
 
-  xit('should render a text field component ', () => {
+  xit('should render a text CommuteIndexTile component ', () => {
     expect(wrapper.find(CommuteIndexTile)).toBePresent();
-    expect(wrapper.find(CommuteIndexTile)).props()).toEqual({})
+    done();
   });
 
 })

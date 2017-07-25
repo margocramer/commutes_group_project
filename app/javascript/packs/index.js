@@ -4,5 +4,7 @@ import commutes_group_project from '../react/src/commutes_group_project';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<YourAppName />, document.getElementById('app'));
+  ReactDOM.render(<App />, document.getElementById('app'));
 });
+
+// 'App' may need to be renamed?

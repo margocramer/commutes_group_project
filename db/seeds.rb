@@ -1,15 +1,24 @@
 require 'faker'
 
 
+8.times do
+  User.create(
+    username: Faker::Ancient.god,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: "bob@bob.com",
+    password: "hellllllllooooooo"
+  )
+end
+
 5.times do
   Commute.create(
     user_id: 1,
     starting_location: Faker::LordOfTheRings.location,
     ending_location: Faker::LordOfTheRings.location,
-    time: "Noon",
+    time: "Morning",
     mode: "Train",
-    description: Faker::HowIMetYourMother.quote,
-    rating: 3
+    description: Faker::HowIMetYourMother.quote
   )
 end
 
@@ -18,18 +27,12 @@ end
     user_id: 1,
     commute_id: rand(1..Commute.all.length),
     comment: Faker::Hobbit.quote,
-    tally_count: 2
+    review_stars: 2
   )
 end
 
 
-# 8.times do
-#   User.create(
-#     username: Faker::Ancient.god,
-#     first_name: Faker::Name.first_name,
-#     last_name: Faker::Name.last_name
-#   )
-# end
+
 
 # 12.times do
 #   Restaurant.create(
