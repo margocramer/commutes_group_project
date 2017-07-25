@@ -3,15 +3,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import CommuteIndexContainer from './containers/CommuteIndexContainer';
 import CommuteShowContainer from './containers/CommuteShowContainer';
 
-class App extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {
-
-    }
-  }
-
-  render() {
+const App = props => {
     return(
       <Router history={browserHistory}>
 
@@ -21,6 +13,5 @@ class App extends React.Component {
 
     );
   };
-};
 
 export default App;
