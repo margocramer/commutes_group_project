@@ -39,4 +39,26 @@ RSpec.describe Api::V1::CommutesController, type: :controller do
     end
   end
 
+  xdescribe "POST#create" do
+    post_json = {starting_location: "Quincy", ending_location: "Somerville", mode: "Train", time: "Afternoon",user_id: 2 }.to_json
+
+    it "creates a new Commute" do
+      expect{ post(:create, body: post_json)}.to change{ Commute.count }.by 1
+      it { expect(response).to redirect_to(root_path) }
+    end
+
+    it "returns the json of the newly posted Commute" do
+      returned_json = JSON.parse(response.body)
+      expect(response.status).to eq 200
+      expect(response.content_type).to eq("application/json")
+
+      expect(returned_json).to be_kind_of(Hash)
+      expect(returned_json).to_not be_kind_of(Array)
+      expect(returned_json["starting_location"]).to eq "Quincy"
+      expect(returned_json["ending_location"]).to eq "Somerville"
+      expect(returned_json["mode"]).to eq "Train"
+      expect(returned_json["time"]).to eq "Afternoon"
+      expect(returned_json["user_id"]).to eq 2
+    end
+  end
 end
