@@ -14,10 +14,17 @@
 
     <% if user_signed_in? %>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <%= current_user.username %>
+      <img src="<%= current_user.photo_url %>" height="50" width="50">
     <% else %>
       <%= link_to 'Sign up', new_user_registration_path %>
         <br />
       <%= link_to 'Sign In', new_user_session_path %>
+    <% end %>
+
+    <%= form_tag(commutes_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+      <%= submit_tag "Search", :name => nil %>
     <% end %>
 
     <%= yield %>
