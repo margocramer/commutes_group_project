@@ -12,11 +12,21 @@ class CommuteIndexContainer extends Component {
 
   componentDidMount() {
     fetch(`/api/v1/commutes.json`)
-      .then((response) => response.json())
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+              error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then(response => response.json())
       .then((responseData) => {
         this.setState({commutes: responseData})
       })
-  }
+      .catch(error => console.error(`Error in fetch: ${error.message}`));
+    }
 
   render() {
     let commutes = this.state.commutes.map(commute => {
