@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "static_pages#index"
+  root "commutes#index"
 
-  resources :commutes
+  resources :commutes do
+    resources :reviews do
+      resources :votes
+    end
+  end
+
 
   namespace :api do
     namespace :v1 do
-      resources :commutes do
-        resources :reviews
-      end
+      resources :commutes
     end
   end
-  # resources :static_pages
+
 end
