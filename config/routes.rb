@@ -10,9 +10,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :commutes do
-        resources :reviews
-      end
+      resources :commutes
     end
   end
 end
