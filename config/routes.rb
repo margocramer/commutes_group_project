@@ -12,5 +12,4 @@ Rails.application.routes.draw do
       end
     end
   end
-  get '/mine' => 'commutes#mine'
 end
