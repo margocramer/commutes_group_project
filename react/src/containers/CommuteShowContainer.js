@@ -34,8 +34,7 @@ class CommuteShowContainer extends Component {
          <br />
         Mode of transportation was: {this.state.commute.mode}
         <br />
-        The poster had this to say:
-        {this.state.commute.description}
+        The poster had this to say: {this.state.commute.description}
       </div>
     )
   }
