@@ -11,4 +11,11 @@ class CommutesController < ApplicationController
     end
   end
 
+  def show
+    @commute = Commute.find(params[:id])
+    @reviews = @commute.reviews
+
+    @review = Review.new
+  end
+
 end

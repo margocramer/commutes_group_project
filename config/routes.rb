@@ -4,19 +4,15 @@ Rails.application.routes.draw do
   root "commutes#index"
 
   resources :commutes do
-    resources :reviews do
-      resources :votes
-    end
+    resources :reviews
   end
 
 
   namespace :api do
     namespace :v1 do
-      resources :commutes
+      resources :commutes do
+        resources :reviews
+      end
     end
   end
-<<<<<<< HEAD
-=======
-
->>>>>>> 333a69310b8535ac6a542bbefdc899ea8e903946
 end

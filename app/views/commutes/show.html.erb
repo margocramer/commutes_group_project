@@ -1,0 +1,11 @@
+<h1><%= @commute.starting_location %><%= @commute.ending_location %></h1>
+
+
+
+<% @reviews.each do |r| %>
+  <p>
+    user_id: <%= r.user_id %> </br>
+    comment: <%= r.comment %> </br>
+    Created at: <%= r.created_at.strftime("%B %d %Y")  %>
+  </p>
+<% end %>
