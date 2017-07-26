@@ -8,6 +8,7 @@ const App = props => {
       <Router history={browserHistory}>
 
           <Route path="/" component={CommuteIndexContainer} />
+          <Route path="/mine" component={CommuteIndexContainer} />
           <Route path="commutes/:id" component={CommuteShowContainer} />
       </Router>
 

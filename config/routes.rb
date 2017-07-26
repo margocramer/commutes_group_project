@@ -12,5 +12,5 @@ Rails.application.routes.draw do
       end
     end
   end
-  # resources :static_pages
+  get '/mine' => 'commutes#mine'
 end
