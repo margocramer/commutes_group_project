@@ -6,8 +6,8 @@ import CommuteShowContainer from './containers/CommuteShowContainer';
 const App = props => {
     return(
       <Router history={browserHistory}>
-
           <Route path="/" component={CommuteIndexContainer} />
+          <Route path="/commutes" component={CommuteIndexContainer} />
           <Route path="commutes/:id" component={CommuteShowContainer} />
       </Router>
 
