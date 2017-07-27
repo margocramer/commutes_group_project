@@ -1,8 +1,7 @@
-<h1>Show page </h1>
 <div id="app">
 </div>
 
-<h1><%= @commute.starting_location %><%= @commute.ending_location %></h1>
+<h1><%= @commute.starting_location %> -to- <%= @commute.ending_location %></h1>
 
 <%= link_to "Add a Review", new_commute_review_path(@commute) %>
 

@@ -14,7 +14,17 @@ class CommutesController < ApplicationController
   def show
       @commute = Commute.find(params[:id])
       @reviews = @commute.reviews
-    # @review = Review.new
+  end
+
+  def new
+    # binding.pry
+    @commute = Commute.new
+  end
+
+  private
+
+  def commute_params
+    params.require(:commute).permit(:starting_location, :ending_location, :mode, :time, :description, :user_id)
   end
 
 end
