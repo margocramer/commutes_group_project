@@ -13,11 +13,9 @@ class ReviewsController < ApplicationController
       @review.user = current_user
 
       if @review.save
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        #add Mailer here
         ReviewMailer.receipt.deliver_now
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        redirect_to root_path,
+
+        redirect_to @commute,
         notice: "Review added successfully!"
       else
         render :new, notice: "There's been a problem!"
@@ -26,6 +24,28 @@ class ReviewsController < ApplicationController
       redirect_to root_path,
       alert: "You cannot add reviews until you are signed in"
     end
+  end
+
+  def edit
+    @review = Review.find(params[:id])
+    @commute = @review.commute
+  end
+
+  def update
+    @review = Review.find(params[:id])
+    @commute = @review.commute
+    if @review.update(review_params)
+      redirect_to @commute, notice: 'Review was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @commute = @review.commute
+    @review.destroy
+    redirect_to @commute, notice: 'Your review was successfully destroyed.'
   end
 
   private

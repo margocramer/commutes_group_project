@@ -12,8 +12,8 @@ class CommutesController < ApplicationController
   end
 
   def show
-      @commute = Commute.find(params[:id])
-      @reviews = @commute.reviews
+    @commute = Commute.find(params[:id])
+    @reviews = @commute.reviews
   end
 
   def new
