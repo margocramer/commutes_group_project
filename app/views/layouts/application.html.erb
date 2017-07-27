@@ -10,7 +10,10 @@
 
   <body>
     <div class="nav-bar">
+      <img src="<%= current_user.photo_url %>"height="50" width="50">
+      Hello, <%= current_user.username %>!
       <%= link_to "Home Page", root_path %>
+      <%= link_to "Edit Account", edit_user_registration_path %>
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
