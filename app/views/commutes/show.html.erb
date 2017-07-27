@@ -12,3 +12,8 @@
     Created at: <%= r.created_at.strftime("%B %d %Y")  %>
   </p>
 <% end %>
+
+
+<% if user_signed_in? && (@commute.user == current_user)%>
+  <%= link_to 'Edit Commute', edit_commute_path(@commute) %>
+<% end %>

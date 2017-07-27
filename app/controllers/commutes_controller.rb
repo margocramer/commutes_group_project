@@ -17,8 +17,20 @@ class CommutesController < ApplicationController
   end
 
   def new
-    # binding.pry
     @commute = Commute.new
+  end
+
+  def edit
+    @commute = Commute.find(params[:id])
+  end
+
+  def update
+    @commute = Commute.find(params[:id])
+    if @commute.update(commute_params)
+      redirect_to @commute, notice: 'Commute was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   private
