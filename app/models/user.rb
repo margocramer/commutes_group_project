@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  mount_uploader :photo_url, PhotoUrl
+
   has_many :commutes
   has_many :reviews
   has_many :votes
