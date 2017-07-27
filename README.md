@@ -10,19 +10,21 @@
 [![Coverage Status](https://coveralls.io/repos/github/margocramer/commutes_group_project/badge.svg?branch=master)](https://coveralls.io/github/margocramer/commutes_group_project?branch=master)
 
 
-All Aboard is for those who love to find the best way of getting from point A to point B. The application allows users to view, create and review other users' commutes. Commutes include information about starting and ending locations, travel time, and mode of transit. Integrating React on Rails, Devise, ActiveRecord and React was a primary goal of the All Aboard development process.
+All Aboard is for those who love to find the best way of getting from point A to point B. The application allows users to view, create and review other users' commutes. Commutes include information about starting and ending locations, travel time, and mode of transit. Integrating Ruby on Rails, Devise, ActiveRecord and React was a primary goal of the All Aboard development process.
 
 
 #Functionality
 
 
--Prior to login or registration users can view commutes and view reviews of those commutes.
-<?SEARCH BAR?>
+-Prior to login or registration users can view existing commutes and view reviews of those commutes.
 
 
--After login, users can view commutes and reviews of those commutes. They can also edit and delete the commutes and the reviews that they have posted.
-<?Users can also upvote and downvote reviews that have been posted to indicate that the review was helpful or accurate.?>
-<?SEARCH BAR?>
+-Users are able to use the search bar to query the database for commutes that match the location of their desired commute     points.
+
+
+-Logged in users can view commutes and reviews of those commutes. They can also edit and delete the commutes and the reviews that they have posted.
+
+-Logged in users are also able to use the search bar to filter out commutes for desired commute locations.
 
 
 -If a user posts a new commute review, the user who created that review receives an email alert.
@@ -46,9 +48,8 @@ Devise used for user authentication and authorization.
 -ActionMailer
 Automated email functionality enabled by ActionMailer.
 
-
--Styling
-<?is this correct?> - Foundation gem for styling.
+-Carrierwave
+Carrierwave was used to upload and storage user profile photos.
 
 
 -Testing
