@@ -53,9 +53,9 @@ Carrierwave was used to upload and storage user profile photos.
 
 
 -Testing
-  -Capbyara feature tests
-  -KARMA controller tests
-  -RSPEC database and mailer tests
+--Capbyara feature tests
+--KARMA controller tests
+--RSPEC database and mailer tests
 
 
 # commutes_group_project
