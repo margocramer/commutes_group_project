@@ -17,12 +17,12 @@ All Aboard is for those who love to find the best way of getting from point A to
 
 
 -Prior to login or registration users can view commutes and view reviews of those commutes.
-<SEARCH BAR?>
+<?SEARCH BAR?>
 
 
 -After login, users can view commutes and reviews of those commutes. They can also edit and delete the commutes and the reviews that they have posted.
-#Users can also upvote and downvote reviews that have been posted to indicate that the review was helpful or accurate.
-<SEARCH BAR?>
+<?Users can also upvote and downvote reviews that have been posted to indicate that the review was helpful or accurate.?>
+<?SEARCH BAR?>
 
 
 -If a user posts a new commute review, the user who created that review receives an email alert.
@@ -48,7 +48,7 @@ Automated email functionality enabled by ActionMailer.
 
 
 -Styling
-<is this correct?> - Foundation gem for styling.
+<?is this correct?> - Foundation gem for styling.
 
 
 -Testing
