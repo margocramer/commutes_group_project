@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+ div.nav-bar
+ {
+    background-color: darkblue;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+ }
+
+ a:link {
+     text-decoration: none;
+ }
+
+ body {
+  /*opacity: 0.5;*/
+  background: url("South_West_Trains.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: darkred;
+ }
+
+ div.transbox {
+    margin: 50px;
+    /*padding: 10px;*/
+    width: 40%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+ }

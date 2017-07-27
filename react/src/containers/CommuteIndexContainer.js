@@ -40,7 +40,7 @@ class CommuteIndexContainer extends Component {
     })
 
     return(
-      <div>
+      <div className="transbox">
         {commutes}
       </div>
     )
