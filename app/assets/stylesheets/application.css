@@ -14,15 +14,16 @@
  *= require_self
  */
 
- a:link {
-     text-decoration: none;
- }
-
-
  div.nav-bar
  {
     background-color: darkblue;
     border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+ }
+
+ a:link {
+     text-decoration: none;
  }
 
  body {
@@ -34,7 +35,6 @@
   background-size: cover;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: darkred;
-  text-shadow: 2px 2px maroon;
  }
 
  div.transbox {
