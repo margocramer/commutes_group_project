@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
       if @review.save
         ReviewMailer.receipt.deliver_now
 
-        redirect_to root_path,
+        redirect_to @commute,
         notice: "Review added successfully!"
       else
         render :new, notice: "There's been a problem!"
@@ -45,7 +45,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @commute = @review.commute
     @review.destroy
-    redirect_to root_path, notice: 'Your review was successfully destroyed.'
+    redirect_to @commute, notice: 'Your review was successfully destroyed.'
   end
 
   private
