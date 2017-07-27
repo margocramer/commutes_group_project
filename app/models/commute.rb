@@ -6,4 +6,9 @@ class Commute < ApplicationRecord
   validates :ending_location, presence: true
   validates :time, inclusion: { in: ["Early Morning", "Morning", "Afternoon", "Early Evening", "Evening", "Night"] }
   validates :mode, inclusion: { in: ["Train", "Walk", "Automobile", "Bike"] }
+
+  def self.search(query)
+    query = "%#{query}%"
+    where("(starting_location like ? or ending_location like ?)", query, query)
+  end
 end

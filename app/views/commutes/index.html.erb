@@ -1,7 +1,23 @@
+<%= form_tag(commutes_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Commutes" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
 <h1>All Aboard! </h1>
 <div id="app">
 </div>
+<% if params[:search].present? %>
+  <% if @commutes.present? %>
+    <p>Search Results for: "<%= params[:search] %>":</p>
 
+    <% @commutes.each do |commute| %>
+      <%= link_to "#{commute.starting_location}-#{commute.ending_location}", commute_path(commute) %>
+      <br/>
+    <% end %>
+  <% else %>
+     <p>There are no commutes with the term <%= params[:search] %>.</p>
+  <% end %>
+<% end %>
 <br /><br /><br />
 
 <%= link_to "Post Commute", new_commute_path %>
