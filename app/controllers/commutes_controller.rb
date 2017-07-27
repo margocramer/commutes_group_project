@@ -39,6 +39,14 @@ class CommutesController < ApplicationController
     redirect_to root_path, notice: 'Commute was successfully destroyed.'
   end
 
+  def index
+    if params[:search]
+      @commutes = Commute.search(params[:search]).order("created_at DESC")
+    else
+      @commutes = Commute.all.order('created_at DESC')
+    end
+  end
+
   private
 
   def commute_params
