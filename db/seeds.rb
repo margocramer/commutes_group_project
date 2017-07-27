@@ -5,7 +5,7 @@ require 'faker'
     username: Faker::Ancient.god,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    email: "bob@bob.com",
+    email: Faker::Internet.unique.email,
     password: "password123"
   )
 end
