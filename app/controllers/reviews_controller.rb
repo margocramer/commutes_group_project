@@ -13,6 +13,10 @@ class ReviewsController < ApplicationController
       @review.user = current_user
 
       if @review.save
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        #add Mailer here
+        ReviewMailer.receipt.deliver_now
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         redirect_to root_path,
         notice: "Review added successfully!"
       else

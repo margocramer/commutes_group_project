@@ -28,7 +28,8 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
   gem 'factory_girl'
-
+  gem 'email_spec'
+  gem 'mailcatcher'
 end
 
 group :production do
