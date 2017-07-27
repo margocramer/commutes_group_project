@@ -1,0 +1,32 @@
+<h1>Edit Commute</h1>
+
+<%= form_for(@commute) do |f| %>
+  <% if @commute.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@commute.errors.count, "error") %> prohibited this commute from being saved:</h2>
+
+      <ul>
+      <% @commute.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :starting_location, "Starting Location" %><br/>
+  <%= f.text_field :starting_location %>
+  <br />
+  <%= f.label :ending_location, "Ending Location" %><br/>
+  <%= f.text_field :ending_location %>
+  <br />
+  <%= f.label :mode, "Mode: (Train, Automobile, Walk, or Bike)" %><br/>
+  <%= f.text_field :mode %>
+  <br />
+  <%= f.label :time, "Time: (Early Morning, Morning, Afternoon, Early Evening, Evening, or Night)"%><br/>
+  <%= f.text_field :time %>
+  <br />
+  <%= f.label :description %><br/>
+  <%= f.text_field :description %>
+  <br /><br/>
+  <%= f.submit "Edit Commute" %>
+<% end %>
