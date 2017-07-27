@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div class="transbox">
     <div class="nav-bar">
       <%= link_to "Home Page", root_path %>
 
@@ -24,9 +25,7 @@
       <% end %>
     </div>
 
-      <br /><br /><br /><br /><br />
-
       <%= yield %>
-
+  </div>
   </body>
 </html>
