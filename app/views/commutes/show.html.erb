@@ -1,0 +1,15 @@
+<h1>Show page </h1>
+<div id="app">
+</div>
+
+<h1><%= @commute.starting_location %><%= @commute.ending_location %></h1>
+
+<%= link_to "Add a Review", new_commute_review_path(@commute) %>
+
+<% @reviews.each do |r| %>
+  <p>
+    user: <%= r.user.username %> </br>
+    comment: <%= r.comment %> </br>
+    Created at: <%= r.created_at.strftime("%B %d %Y")  %>
+  </p>
+<% end %>

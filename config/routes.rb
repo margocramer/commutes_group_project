@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   root "commutes#index"
 
   resources :commutes do
-    resources :reviews do
-      resources :votes
-    end
+    resources :reviews
   end
 
 
@@ -15,5 +13,4 @@ Rails.application.routes.draw do
       resources :commutes
     end
   end
-
 end

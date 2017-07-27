@@ -26,17 +26,4 @@ RSpec.describe Api::V1::CommutesController, type: :controller do
       expect(returned_json[1]["mode"]).to eq "Walk"
     end
   end
-
-  xdescribe "GET#show" do
-    it "should return reviews for the commute being shown" do
-
-      get :show
-      returned_json = JSON.parse(response.body)
-
-      expect(response.status).to eq 200
-      expect(response.content_type).to eq("application/json")
-
-    end
-  end
-
 end
