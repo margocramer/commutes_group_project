@@ -14,16 +14,17 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
+      <%= link_to "Home Page", root_path %>
+      <br />
       <% if user_signed_in? %>
         <img src="<%= current_user.photo_url %>"height="50" width="50">
         Hello, <%= current_user.username %>!
-        <%= link_to "Home Page", root_path %>
         <%= link_to "Edit Account", edit_user_registration_path %>
-
+          ||
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to 'Sign up', new_user_registration_path %>
-          <br />
+          ||
         <%= link_to 'Sign In', new_user_session_path %>
       <% end %>
     </div>
