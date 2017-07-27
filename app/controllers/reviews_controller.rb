@@ -18,6 +18,9 @@ class ReviewsController < ApplicationController
       else
         render :new, notice: "There's been a problem!"
       end
+    else
+      redirect_to root_path,
+      alert: "You cannot add reviews until you are signed in"
     end
   end
 
