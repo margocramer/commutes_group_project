@@ -17,3 +17,7 @@
 <% if user_signed_in? && (@commute.user == current_user)%>
   <%= link_to 'Edit Commute', edit_commute_path(@commute) %>
 <% end %>
+
+<% if user_signed_in? && (@commute.user == current_user)%>
+  <%= link_to 'Delete Commute', @commute, method: :delete, data: { confirm: 'Are you sure you want to delete this commute?' } %>
+<% end %>
