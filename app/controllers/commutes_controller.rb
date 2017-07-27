@@ -33,6 +33,12 @@ class CommutesController < ApplicationController
     end
   end
 
+  def destroy
+    @commute = Commute.find(params[:id])
+    @commute.destroy
+    redirect_to root_path, notice: 'Commute was successfully destroyed.'
+  end
+
   private
 
   def commute_params

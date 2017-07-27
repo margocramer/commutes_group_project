@@ -1,6 +1,6 @@
 class Commute < ApplicationRecord
   belongs_to :user
-  has_many :reviews
+  has_many :reviews, :dependent => :destroy
 
   validates :starting_location, presence: true
   validates :ending_location, presence: true
