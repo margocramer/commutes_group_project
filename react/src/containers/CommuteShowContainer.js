@@ -28,14 +28,15 @@ class CommuteShowContainer extends Component {
     }
 
   render() {
+    // debugger
     return(
       <div>
-        This commute started at: {this.state.commute.starting_location} and ended at: {this.state.commute.ending_location}
+        <strong>This commute started at: </strong>{this.state.commute.starting_location} <strong>and ended at: {this.state.commute.ending_location}</strong>
          <br />
-        Mode of transportation was: {this.state.commute.mode}
+        <strong>Commute occurred in the</strong> {this.state.commute.time} <strong>via: </strong>{this.state.commute.mode}
         <br />
-        The poster had this to say:
-        {this.state.commute.description}
+        <em>{this.state.commute.description}</em>
+        <hr />
       </div>
     )
   }

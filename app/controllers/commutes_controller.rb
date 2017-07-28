@@ -1,6 +1,8 @@
 class CommutesController < ApplicationController
 
   def create
+    @mode_collection = Commute::METHODS
+    @times = Commute::TIMES
     @commute = Commute.new(commute_params)
     if @commute.save
       flash[:alert] = "Commute added successfully"
@@ -17,14 +19,20 @@ class CommutesController < ApplicationController
   end
 
   def new
+    @mode_collection = Commute::METHODS
+    @times = Commute::TIMES
     @commute = Commute.new
   end
 
   def edit
+    @mode_collection = Commute::METHODS
+    @times = Commute::TIMES
     @commute = Commute.find(params[:id])
   end
 
   def update
+    @mode_collection = Commute::METHODS
+    @times = Commute::TIMES
     @commute = Commute.find(params[:id])
     if @commute.update(commute_params)
       redirect_to @commute, notice: 'Commute was successfully updated.'
