@@ -28,7 +28,6 @@ class CommuteShowContainer extends Component {
     }
 
   render() {
-    // debugger
     return(
       <div>
         <strong>This commute started at: </strong>{this.state.commute.starting_location} <strong>and ended at: {this.state.commute.ending_location}</strong>
