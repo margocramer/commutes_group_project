@@ -13,7 +13,35 @@
 All Aboard is for those who love to find the best way of getting from point A to point B. The application allows users to view, create and review other users' commutes. Commutes include information about starting and ending locations, travel time, and mode of transit. Integrating Ruby on Rails, Devise, ActiveRecord and React was a primary goal of the All Aboard development process.
 
 
-#Functionality
+# Local Setup
+
+Run these in your command line:
+
+-git clone https://github.com/margocramer/commutes_group_project\
+
+-bundle
+
+-npm install
+
+-rake db:create
+
+-rake db:migrate
+
+-rake db:seed
+
+-rails s
+
+-npm start (in separate terminal)
+
+Testing:
+
+-Rake db:test:prepare
+
+-Rake
+
+
+
+# Functionality
 
 
 -Prior to login or registration users can view existing commutes and view reviews of those commutes.
@@ -21,16 +49,19 @@ All Aboard is for those who love to find the best way of getting from point A to
 
 -Users are able to use the search bar to query the database for commutes that match the location of their desired commute     points.
 
-
 -Logged in users can view commutes and reviews of those commutes. They can also edit and delete the commutes and the reviews that they have posted.
 
 -Logged in users are also able to use the search bar to filter out commutes for desired commute locations.
 
 
+-Users may upload a photo image for their account avatar.
+
+-Users may edit their account information.
+
 -If a user posts a new commute review, the user who created that review receives an email alert.
 
 
-#Technologies
+# Technologies
 
 
 -React
@@ -60,5 +91,22 @@ Carrierwave was used to upload and storage user profile photos.
 
 --RSPEC database and mailer tests
 
+# Contributers
+
+Margo Cramer
+
+https://github.com/margocramer
+
+Michelle Nosal
+
+https://github.com/CodeNameNosal
+
+Alan Wang
+
+https://github.com/Alan-w92
+
+Sumner Webster
+
+https://github.com/GettinSquirrely
 
 # commutes_group_project
