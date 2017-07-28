@@ -19,7 +19,7 @@
 
   <div class="field">
     <%= f.label :review_stars %>
-    <%= f.text_field :review_stars %>
+    <%= f.select :review_stars, @stars, selected: 3 %>
   </div>
 
   <div class="field">

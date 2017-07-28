@@ -1,11 +1,13 @@
 class ReviewsController < ApplicationController
 
   def new
+    @stars = Review::STARS
     @review = Review.new
     @commute = Commute.find(params[:commute_id])
   end
 
   def create
+    @stars = Review::STARS
     if current_user
       @review = Review.new(review_params)
       @commute = Commute.find(params[:commute_id])
@@ -27,11 +29,13 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @stars = Review::STARS
     @review = Review.find(params[:id])
     @commute = @review.commute
   end
 
   def update
+    @stars = Review::STARS
     @review = Review.find(params[:id])
     @commute = @review.commute
     if @review.update(review_params)
