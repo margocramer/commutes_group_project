@@ -17,7 +17,7 @@ All Aboard is for those who love to find the best way of getting from point A to
 
 Run these in your command line:
 
--git clone https://github.com/margocramer/commutes_group_project\
+-git clone https://github.com/margocramer/commutes_group_project
 
 -bundle
 
