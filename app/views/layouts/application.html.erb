@@ -17,7 +17,9 @@
       <%= link_to "Home Page", root_path %>
       <br />
       <% if user_signed_in? %>
-        <img src="<%= current_user.photo_url %>"height="50" width="50">
+        <% if current_user.photo_url.file != nil %>
+          <img class="photo" src="<%= current_user.photo_url %>">
+        <% end %>
         Hello, <%= current_user.username %>!
         <%= link_to "Edit Account", edit_user_registration_path %>
           ||
