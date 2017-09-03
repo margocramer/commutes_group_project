@@ -49,3 +49,20 @@
     /*opacity: 0.45;
     filter: alpha(opacity=45); /* For IE8 and earlier */*/
  }
+
+ .search-results {
+   margin-bottom: 4em;
+ }
+
+ img {
+   height: 50px;
+   width: 50px;
+ }
+
+ .search-form {
+   margin-bottom: 2em;
+ }
+
+ .commute-links {
+   margin-bottom: 1em;
+ }
