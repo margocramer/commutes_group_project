@@ -29,3 +29,12 @@ end
     review_stars: 2
   )
 end
+
+User.create(
+  username: 'kingbob',
+  first_name: 'bob',
+  last_name: 'bob',
+  email: 'bob123@bob.com',
+  password: "123456",
+  admin: true
+)
